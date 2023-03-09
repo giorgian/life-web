@@ -1,0 +1,14 @@
+%div{data: { controller: "games"}}
+  %p= t('games.size', size: game_size(@game))
+  %p= t('games.generation', generation: @game.generation)
+
+  %p
+    = button_to t('games.next_step'), @game
+    = button_to t('games.reset'), @game, params: { reset: true }
+
+  .board
+    - @game.to_generation.grid.each do |row|
+      .board-row
+        - row.each do |cell|
+          = game_cell(cell)
+

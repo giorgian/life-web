@@ -1,0 +1,24 @@
+$cell-size: 20px;
+
+.board {
+  display: table;
+  margin: auto;
+  border: 1px solid #999;
+  padding: $cell-size / 2;
+
+  .board-row {
+    display: table-row;
+  }
+
+  .board-cell {
+    display: table-cell;
+    width: $cell-size;
+    height: $cell-size;
+    line-height: $cell-size;
+    font-size: $cell-size;
+
+    &.alive {
+      color: #3a3;
+    }
+  }
+}

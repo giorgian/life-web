@@ -1,0 +1,45 @@
+.user-header {
+  float: right;
+
+  form {
+    display: inline-block;
+  }
+
+  button {
+    color: #338;
+    outline: none;
+    background-color: inherit;
+    border: none;
+    cursor: pointer;
+    padding: 6px;
+
+    &:hover {
+      color: #44c;
+      text-decoration: underline;
+      // background-color: #ccb;
+      // border-radius: 5px;
+    }
+    // border-color: #665;
+
+    // background-color: ;
+  }
+}
+
+.alert, .notice {
+  display: block;
+  width: 40%;
+  text-align: center;
+  border-radius: 2em;
+  padding: 1em;
+  margin: 1em auto;
+}
+
+.alert {
+  border: 1px solid #933;
+  background-color: #faa;
+}
+
+.notice {
+  border: 1px solid #393;
+  background-color: #afa;
+}

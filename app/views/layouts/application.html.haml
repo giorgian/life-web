@@ -1,0 +1,25 @@
+!!! html
+%html
+  %head
+    %title Conway's Game of Life
+    %meta{name: "viewport", content:"width=device-width,initial-scale=1"}
+    = csrf_meta_tags
+    = csp_meta_tag
+    = stylesheet_link_tag "application", "data-turbo-track": "reload"
+
+  %body
+    .user-header
+      - if current_user
+        %span.user-login= current_user.email
+        = button_to t('home.sign_out'), destroy_user_session_path, method: :delete
+      - else
+        = button_to t('home.sign_in'), new_user_session_path, method: :get
+
+    %h1= link_to t("home.title"), root_url
+
+    - flash.each do |type, msg|
+      %div{class: type}= msg
+    -# .notice= notice
+    -# .alert= alert
+    = yield
+    = javascript_importmap_tags

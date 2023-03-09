@@ -1,0 +1,15 @@
+%h2= t('games.index.title')
+
+%table
+  %thead
+    %tr
+      %th= t('games.width')
+      %th= t('games.height')
+      %th= t('games.created_at')
+  %tbody
+    - @games.each do |game|
+      %tr
+        %td= link_to game.width, game
+        %td= link_to game.height, game
+        %td= link_to game.created_at, game
+

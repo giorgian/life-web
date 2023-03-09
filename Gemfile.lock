@@ -1,3 +1,10 @@
+GIT
+  remote: https://github.com/giorgian/life.git
+  revision: 8d0e3535dd2306109b677e0adc5ea880f362075a
+  branch: main
+  specs:
+    life (0.1.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -95,8 +102,13 @@ GEM
       responders
       warden (~> 1.2.3)
     erubi (1.12.0)
+    ffi (1.15.5)
     globalid (1.1.0)
       activesupport (>= 5.0)
+    haml (6.1.1)
+      temple (>= 0.8.2)
+      thor
+      tilt
     i18n (1.12.0)
       concurrent-ruby (~> 1.0)
     importmap-rails (1.1.5)
@@ -178,6 +190,14 @@ GEM
       railties (>= 5.2)
     rexml (3.2.5)
     rubyzip (2.3.2)
+    sassc (2.4.0)
+      ffi (~> 1.9)
+    sassc-rails (2.1.2)
+      railties (>= 4.0.0)
+      sassc (>= 2.0)
+      sprockets (> 3.0)
+      sprockets-rails
+      tilt
     selenium-webdriver (4.8.1)
       rexml (~> 3.2, >= 3.2.5)
       rubyzip (>= 1.2.2, < 3.0)
@@ -192,7 +212,9 @@ GEM
     sqlite3 (1.6.1-x86_64-darwin)
     stimulus-rails (1.2.1)
       railties (>= 6.0.0)
+    temple (0.10.0)
     thor (1.2.1)
+    tilt (2.1.0)
     timeout (0.3.2)
     turbo-rails (1.4.0)
       actionpack (>= 6.0.0)
@@ -227,11 +249,14 @@ DEPENDENCIES
   capybara
   debug
   devise (~> 4.9.0)
+  haml (~> 6.1.1)
   importmap-rails
   jbuilder
+  life!
   puma (~> 5.0)
   rails (~> 7.0.4, >= 7.0.4.2)
   redis (~> 4.0)
+  sassc-rails
   selenium-webdriver
   sprockets-rails
   sqlite3 (~> 1.4)

@@ -1,0 +1,8 @@
+- if @games_count.zero?
+  %p= t('home.no_owned_games')
+- else
+  %p= t('home.owned_games', count: @games_count)
+  %p= link_to t('home.games_link', count: @games_count), games_url
+
+= form_for Game.new, multipart: true do |f|
+  = f.file_field :input, onchange: "this.form.submit()"

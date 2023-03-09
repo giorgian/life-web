@@ -30,4 +30,27 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  games:
+    created_at: Created
+    generation: "Generation: %{generation}"
+    height: Height
+    index:
+      title: Your games
+    invalid_file: The file is invalid
+    next_step: Next step
+    size: "Size: %{size}"
+    width: Width
+
+  home:
+    games_link:
+      one: See your game!
+      other: See your games!
+    hero: Sign in or register to play!
+    no_owned_games: You have not uploaded any games yet!
+    owned_games:
+      one: You have uploaded one game so far!
+      other: You have uploaded %{count} games so far!
+    sign_in: sign in
+    sign_out: sign out
+    subtitle: Try it!
+    title: Conway's Game of Life
